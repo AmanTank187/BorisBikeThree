@@ -3,11 +3,4 @@ class Bike
     true
   end
 
-  def docked?
-    true 
-  end
-
-  def hired?
-    true
-  end
 end
