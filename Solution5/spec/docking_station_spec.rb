@@ -29,9 +29,19 @@ describe DockingStation do
 
   describe '#dock(bike)' do
     it 'raises error when docking station is full' do
-      DockingStation::DEFAULT_CAPACITY.times{subject.dock (Bike.new)}
+      subject.capacity.times{subject.dock (Bike.new)}
       expect { subject.dock(Bike.new) }.to raise_error "Docking station is full"
     end
+
+
+  end
+
+  it 'Allows a user to set a capacity instance variable when dockingstation class is called' do
+    expect(DockingStation).to respond_to(:new).with(1).argument
+  end
+
+  it 'has a defualt capacity' do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
 end
