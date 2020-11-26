@@ -10,9 +10,9 @@ describe DockingStation do
     end
   end
 
-  describe '#dock' do
+  describe '#docking_bikes' do
     it 'should dock a bike' do
-      expect(bike.dock).to eq true
+      expect(bike.docking_bikes).to eq true
     end
   end
 end
